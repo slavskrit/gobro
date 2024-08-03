@@ -48,6 +48,7 @@ func CreateTempDirectoryForChat(chatID int64) string {
 }
 
 func DownloadFile(url string, filepath string) error {
+	logger.Printf("Downloading audio from: %v \t to: %v", url, filepath)
 	out, err := os.Create(filepath)
 	if err != nil {
 		return err
